@@ -18,7 +18,7 @@ function SectionTitle({ en, zh, lead }: { en: string; zh: string; lead?: string 
   return (
     <div className="max-w-2xl">
       <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand">{en}</p>
-      <h2 className="mt-3 font-serif text-3xl font-semibold leading-tight sm:text-[2.1rem]">{zh}</h2>
+      <h2 className="mt-3 text-balance font-serif text-3xl font-semibold leading-tight sm:text-[2.1rem]">{zh}</h2>
       {lead && <p className="mt-4 leading-relaxed text-muted">{lead}</p>}
     </div>
   );
@@ -53,10 +53,11 @@ export default async function HomePage() {
 
       {/* ───── 主視覺 ───── */}
       <section className="relative overflow-hidden">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-16 pt-12 sm:px-6 md:grid-cols-[1.1fr_1fr] md:pb-24 md:pt-20">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-16 pt-10 sm:px-6 lg:grid-cols-[1.1fr_1fr] lg:pb-24 lg:pt-20">
           <div>
             <p className="text-sm tracking-[0.15em] text-brand">{settings.hero_eyebrow}</p>
-            <h1 className="mt-5 whitespace-pre-line font-serif text-[2.1rem] font-semibold leading-[1.3] sm:text-5xl sm:leading-[1.25]">
+            {/* 字級隨螢幕寬度縮放，讓每一行標題在手機上也不會被拆開 */}
+            <h1 className="mt-5 whitespace-pre-line font-serif text-[clamp(1.25rem,6.6vw,2.6rem)] font-semibold leading-[1.35] lg:text-[clamp(2.1rem,3.3vw,2.6rem)] lg:leading-[1.3]">
               {settings.hero_title}
             </h1>
             <p className="mt-6 max-w-xl text-[1.05rem] leading-relaxed text-muted">{settings.hero_subtitle}</p>
@@ -69,7 +70,7 @@ export default async function HomePage() {
               </Link>
             </div>
           </div>
-          <div className="relative mx-auto w-full max-w-md">
+          <div className="relative mx-auto w-full max-w-[16rem] sm:max-w-xs lg:max-w-md">
             <div className="aspect-[4/5] overflow-hidden rounded-t-[999px] rounded-b-3xl bg-blush">
               {settings.hero_image ? (
                 // eslint-disable-next-line @next/next/no-img-element

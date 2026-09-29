@@ -4,7 +4,7 @@ import { telHref } from "./Footer";
 export function MobileBookingBar({ settings }: { settings: SiteSettings }) {
   const tel = settings.mobile || settings.phone;
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 flex gap-2 border-t border-line bg-white/95 p-3 backdrop-blur md:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-40 flex gap-2 border-t border-line bg-white/95 p-3 backdrop-blur lg:hidden">
       {tel && (
         <a href={telHref(tel)} className="btn btn-outline flex-1">
           撥打電話

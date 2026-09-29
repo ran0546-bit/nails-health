@@ -6,7 +6,7 @@ export const telHref = (n: string) => `tel:${n.replace(/[^0-9+]/g, "")}`;
 
 export function Footer({ settings }: { settings: SiteSettings }) {
   return (
-    <footer className="border-t border-line bg-white pb-24 pt-12 md:pb-12">
+    <footer className="border-t border-line bg-white pb-24 pt-12 lg:pb-12">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 md:grid-cols-[1.2fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-2.5">

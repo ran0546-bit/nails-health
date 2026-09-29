@@ -19,7 +19,7 @@ export function ArticleView({ post, settings }: { post: Post; settings: SiteSett
           </>
         )}
       </nav>
-      <h1 className="mt-4 font-serif text-3xl font-semibold leading-tight sm:text-4xl">{post.title}</h1>
+      <h1 className="mt-4 text-balance font-serif text-3xl font-semibold leading-tight sm:text-4xl">{post.title}</h1>
       <p className="mt-4 text-sm text-muted">{formatDate(post.published_at ?? post.updated_at)}</p>
       {post.cover_url && (
         // eslint-disable-next-line @next/next/no-img-element

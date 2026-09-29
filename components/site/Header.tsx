@@ -18,7 +18,7 @@ export function Header({ lineUrl }: { lineUrl: string }) {
     <header className="sticky top-0 z-40 border-b border-line/70 bg-ivory/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Logo />
-        <nav className="hidden items-center gap-7 text-[0.95rem] md:flex">
+        <nav className="hidden items-center gap-7 text-[0.95rem] lg:flex">
           {nav.map((item) => (
             <Link key={item.href} href={item.href} className="text-ink/80 transition hover:text-brand">
               {item.label}
@@ -30,7 +30,7 @@ export function Header({ lineUrl }: { lineUrl: string }) {
         </nav>
         <button
           type="button"
-          className="-mr-2 p-2 md:hidden"
+          className="-mr-2 p-2 lg:hidden"
           aria-label={open ? "關閉選單" : "開啟選單"}
           aria-expanded={open}
           onClick={() => setOpen(!open)}
@@ -41,7 +41,7 @@ export function Header({ lineUrl }: { lineUrl: string }) {
         </button>
       </div>
       {open && (
-        <nav className="border-t border-line bg-ivory px-4 pb-5 pt-2 md:hidden">
+        <nav className="border-t border-line bg-ivory px-4 pb-5 pt-2 lg:hidden">
           {nav.map((item) => (
             <Link
               key={item.href}
